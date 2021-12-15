@@ -8,6 +8,7 @@ if separator not in",;/":
 l = set(list(number.split(separator)))
 l = sorted(l)
 #список уникальных значений
+l = sorted(l,reverse=False)
 l_unique = list(set(l))
 print('all',l)
 print('Unique',l_unique)
