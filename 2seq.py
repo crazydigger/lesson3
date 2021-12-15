@@ -5,18 +5,18 @@ if separator not in",;/":
     print("неверный разделитель!можно импользоватьзапятую точку с запятой и слэш")
 # Сохранить цифры в список#
 
-l = number.split(separator)
+l = set(list(number.split(separator)))
 #список уникальных значений
-l_uniq = set(l)
+l_uniq = list(set(l))
 print(l)
 print(l_uniq)
-for i in range(int(number)):
-    new_item = input('введите число:')
-    l.append(new_item)
+#for i in range(int(number)):
+ #   new_item = input('введите число:')
+#l.append(new_item)
 
-    l = sorted(l)
-    #l=l.sort()
-    sorted(l, )
+l = sorted(l)
+#l=l.sort()
+sorted(l, )
 
 print(l)
 # Отсортировать список по возрастанию и вывести на экран
