@@ -11,4 +11,4 @@ s=set((1,2,3))
 print("методы множеств:\n1.s.add((4)),2.s.remove(1), 3.s.len(),5.sorted(s,reverse=true")
 #новая строка
 str='hello Python'
-print("методы строк:\natr.s.upper((4)),2.str.lower(1), 3.str.len(),5.str.find(\"hello\")
+print("методы строк:\nstr.s.upper(()),2.str.lower(), 3.str.len(),5.str.find(\"hello\")
