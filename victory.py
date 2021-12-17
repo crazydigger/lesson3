@@ -9,25 +9,30 @@ famous_persons={}
 for i in range(len(names)):
     famous_persons=famous_persons.fromkeys(names)
     print(names[i],dates[i])
-    famous_persons={names[i]:dates[i]}
+    n = names[i].replace('','')
+    d = dates[i].replace('','')
+    print('name!!!!!',n)
+    print('date=====',d)
+    famous_persons={n:d}
     #famous_persons(names[i],dates[i])
 print(famous_persons)
 
 
 
 count_right=0
-for question in names:
-    print('name:::',famous_persons[question])
-    try:
-        print('right answer!!!!!!!!!!!!!!!!', famous_persons[names[0]])
-    #except:
-        continue
+for i in range(len(names)):
 
 
-        d_answ=input('введите дату рождения'+question+ 'в формате ddmmyyyy:')
-        if(d_answ==famous_persons[question]):
 
-            print('right answer!!!!!!!!!!!!!!!!',famous_persons[question])
-    except:
-        pass
+
+
+
+
+    d_answ=input('введите дату рождения'+names[i]+ 'в формате ddmmyyyy:')
+    if(d_answ==dates[i]):
+
+        print('right answer!!!!!!!!!!!!!!!!')
+
+
         count_right+=1
+print('gпроцент правильных ответов',round(count_right/len(names)*100,2))
