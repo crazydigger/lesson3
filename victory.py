@@ -14,7 +14,7 @@ for i in range(len(names)):
     #famous_persons(names[i],dates[i])
 print(famous_persons)
 def long_date(m):
-    months={'01':'январь','02':'февраль','03':'март','04':'апрель','05':'май','06':'июнь','07':'июль','08':'август','09':'сентябрь','10':'октябрь','11':'ноябрь','12':'декабрь'}
+    months={'01':'января','02':'февраля','03':'марта','04':'апреля','05':'мая','06':'июня','07':'июля','08':'августа','09':'сентября','10':'октября','11':'ноября','12':'декабря'}
     result=''
     try:
         result =months[m]
@@ -51,11 +51,12 @@ while(input('повторим?-1нет-0')):
 
 
         d_answ=input('введите дату рождения'+names[i]+ 'в формате ddmmyyyy:')
-    if(d_answ==dates[i]):
+        if(d_answ==dates[i]):
 
-        print('right answer!!!!!!!!!!!!!!!!',d_answ[:3]+long_date(int(d_answ[2:3]))+d_answ[3:])
+            print('right answer:',d_answ[:3]+long_date(d_answ[2:4])+d_answ[-4:])
 
 
-        count_right+=1
-print('gпроцент правильных ответов',round(count_right/len(names)*100,2))
-print('gпроцент неправильных ответов',100-round(count_right/len(names)*100,2))
+            #print('месяц',long_date(d_answ[2:4]))
+            count_right+=1
+    print('gпроцент правильных ответов',round(count_right/len(names)*100,2))
+    print('gпроцент неправильных ответов',100-round(count_right/len(names)*100,2))
